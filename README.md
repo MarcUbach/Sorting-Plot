@@ -26,25 +26,11 @@ The algorithms then act on the previously defined vectors while measuring each o
 python3 -m pip install numpy
 python3 -m pip install matplotlib
 ```
-#### Compile and build for POSIX
+#### Compile and build
 ```shell script
 mkdir build 
 cd build
 cmake ..
-cmake --build .
-```
-#### Compile and build for Windows (VisualStudio 2019)
-```shell script
-mkdir build
-cd build
-cmake .. -G "Visual Studio 16 2019" -A x64
-cmake --build .
-```
-#### Compile and build for Windows (MinGW)
-```shell script
-mkdir build
-cd build
-cmake .. -G "MinGW Makefiles"
 cmake --build .
 ```
 
