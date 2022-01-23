@@ -17,6 +17,7 @@ The algorithms then act on the previously defined vectors while measuring each o
 - Numpy
 - [Matplotlib-cpp](https://github.com/lava/matplotlib-cpp)
 - [CMake](https://github.com/Kitware/CMake) >= 3.0 installed.
+- C++17 compatible compiler
 
 ## Building
 #### Getting numpy and matplotlib
