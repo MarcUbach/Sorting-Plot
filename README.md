@@ -1,4 +1,5 @@
-[![Build](https://github.com/MarcUbach/Sorting-Plot/actions/workflows/build.yml/badge.svg)](https://github.com/MarcUbach/Sorting-Plot/actions/workflows/build.yml)
+[![Linux](https://github.com/MarcUbach/Sorting-Plot/actions/workflows/linux.yml/badge.svg)](https://github.com/MarcUbach/Sorting-Plot/actions/workflows/linux.yml)
+[![Windows(VisualStudio 2019)](https://github.com/MarcUbach/Sorting-Plot/actions/workflows/windows.yml/badge.svg)](https://github.com/MarcUbach/Sorting-Plot/actions/workflows/windows.yml)
 
 ## Sorting Algorithms
 
