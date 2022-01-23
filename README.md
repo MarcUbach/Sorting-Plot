@@ -19,19 +19,26 @@ The algorithms then act on the previously defined vectors while measuring each o
 - [CMake](https://github.com/Kitware/CMake) >= 3.0 installed.
 
 ## Building
-### Building for POSIX
 #### Getting numpy and matplotlib
 ```shell script
 python3 -m pip install numpy
 python3 -m pip install matplotlib
 ```
-#### Compile and build
+#### Compile and build for POSIX
 ```shell script
 mkdir build 
 cd build
 cmake ..
 cmake --build .
 ```
+#### Compile and build for Windows (Example VisualStudio 2019)
+```shell script
+mkdir build
+cd build
+cmake .. -G "Visual Studio 16 2019" -A x64
+cmake --build .
+```
+
 ## Running
 
 The corresponding ```sorter.exe``` will be found inside the ```build``` folder.
