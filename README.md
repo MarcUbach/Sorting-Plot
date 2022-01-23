@@ -3,16 +3,19 @@
 ## Sorting Algorithms
 
 Program that allows for run-time plotting of different sorting algorithms: bubble, insertion, selection, quicksort, shellsort and std::sort.
-
 It also allows to easily visualize the efficiency between them.
 
-### TODO: Add explanation of how it works and some screenshots.
+The program works by creating a series of vector iterations from which to plot each algorithm. The program will receive a number input from the user, from which a linearly spaced vector will be created. This vector will determine each iteration from which to create the plot. 
+(Example: If the user inputs 10.000, a vector with 10 iterations will be created {1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10.000}
+
+Each of these iterations will on itself create a random unsorted vector containing that number of items. 
+The algorithms then act on the previously defined vectors while measuring each ones performance. The plotting is done by taking each iterations total sorting time.
 
 ## Dependencies
 - Python3
 - Numpy
 - [Matplotlib-cpp](https://github.com/lava/matplotlib-cpp)
-- [CMake](https://github.com/Kitware/CMake) >= 3.14 installed.
+- [CMake](https://github.com/Kitware/CMake) >= 3.0 installed.
 
 ## Building
 ### Building for POSIX
@@ -46,5 +49,15 @@ Run:
                         - std
                         
     Example: ./sorter.exe 30000 insertion selection bubble
-```
+ ```
+ 
+## Screenshots
+Output of: ```./sorter.exe bubble selection insertion 10000```
+
+![Bubble-Selection-Insertion](https://user-images.githubusercontent.com/25902186/150685829-765ba7f5-d492-42dc-93c4-82122c78dd07.png)
+
+Output of: ```./sorter.exe quick std 1000000```
+
+![Quick-STD-1mill](https://user-images.githubusercontent.com/25902186/150685864-831f5c47-554f-4ee8-8ce0-56a280f46dcb.png)
+
 ## TODO: Add Windows CMake generator
