@@ -1,1 +1,1 @@
-
+[![Build](https://github.com/MarcUbach/Sorting-Plot/actions/workflows/build.yml/badge.svg)](https://github.com/MarcUbach/Sorting-Plot/actions/workflows/build.yml)
