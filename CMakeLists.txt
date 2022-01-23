@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.13)
 project("Sorter" LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 
@@ -12,34 +12,26 @@ find_package(Python3 COMPONENTS Interpreter Development NumPy REQUIRED)
 find_package(PythonLibs 3.0 REQUIRED)
 include_directories(${PYTHON_INCLUDE_DIRS})
 
-# Populate matplotlib repository
-include(FetchContent)
-FetchContent_Declare(
-        matplotlib
-        GIT_REPOSITORY https://github.com/lava/matplotlib-cpp.git
-)
-FetchContent_MakeAvailable(matplotlib)
-
 set(SOURCES
-        src/Algorithms/BubbleSort.cpp
-        src/Algorithms/InsertionSort.cpp
-        src/Algorithms/SelectionSort.cpp
-        src/Algorithms/ShellSort.cpp
-        src/Algorithms/QuickSort.cpp
-        src/Algorithms/StdSort.cpp
-        src/VectorUtils.cpp
-        src/InputHandler.cpp
-        src/SortingAlgorithmsContainer.cpp
-        src/Sorter.cpp
+    src/Algorithms/BubbleSort.cpp
+    src/Algorithms/InsertionSort.cpp
+    src/Algorithms/SelectionSort.cpp
+    src/Algorithms/QuickSort.cpp
+    src/Algorithms/ShellSort.cpp
+    src/Algorithms/StdSort.cpp
+    src/VectorUtils.cpp
+    src/InputHandler.cpp
+    src/SortingAlgorithmsContainer.cpp
+    src/Sorter.cpp
 )
 
-include_directories(SYSTEM ${matplotlib_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/src)
+include_directories(SYSTEM lib/${matplotlib_cpp_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 add_executable(sorter ${SOURCES} main.cpp)
 
 # Link python and numpy
 target_link_libraries(sorter
-        PRIVATE
-        ${PYTHON_LIBRARIES}
-        Python3::NumPy
+    PRIVATE
+    ${PYTHON_LIBRARIES}
+    Python3::NumPy
 )
