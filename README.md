@@ -67,5 +67,3 @@ Output of: ```./sorter.exe bubble selection insertion 10000```
 Output of: ```./sorter.exe quick std 1000000```
 
 ![Quick-STD-1mill](https://user-images.githubusercontent.com/25902186/150685864-831f5c47-554f-4ee8-8ce0-56a280f46dcb.png)
-
-## TODO: Add Windows CMake generator
