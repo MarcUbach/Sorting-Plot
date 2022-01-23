@@ -33,11 +33,18 @@ cd build
 cmake ..
 cmake --build .
 ```
-#### Compile and build for Windows (Example VisualStudio 2019)
+#### Compile and build for Windows (VisualStudio 2019)
 ```shell script
 mkdir build
 cd build
 cmake .. -G "Visual Studio 16 2019" -A x64
+cmake --build .
+```
+#### Compile and build for Windows (MinGW)
+```shell script
+mkdir build
+cd build
+cmake .. -G "MinGW Makefiles"
 cmake --build .
 ```
 
