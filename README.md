@@ -55,10 +55,10 @@ Run:
  ```
  
 ## Screenshots
-Output of: ```./sorter.exe bubble selection insertion 10000```
+Output of: ```./sorter.exe 10000 bubble selection insertion```
 
 ![Bubble-Selection-Insertion](https://user-images.githubusercontent.com/25902186/150685829-765ba7f5-d492-42dc-93c4-82122c78dd07.png)
 
-Output of: ```./sorter.exe quick std 1000000```
+Output of: ```./sorter.exe 1000000 quick std```
 
 ![Quick-STD-1mill](https://user-images.githubusercontent.com/25902186/150685864-831f5c47-554f-4ee8-8ce0-56a280f46dcb.png)
